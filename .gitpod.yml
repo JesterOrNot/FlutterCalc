@@ -5,9 +5,7 @@ vscode:
     - Dart-Code.flutter@3.5.1:0FyuzXye7dV19PNst3+Llg==
 tasks:
   - name: Calculator
-    init: |
-      cd calc
-      flutter run --web-port 8080
+    init: flutter run --web-port 8080
 ports:
   - port: 8080
     onOpen: open-preview
