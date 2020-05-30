@@ -11,7 +11,7 @@ class KeyPad extends StatelessWidget {
         SizedBox(
           width: 2,
         ),
-        CalculatorButton(icon: Icon(MdiIcons.plusMinus)),
+        CalculatorButton(icon: Icon(MdiIcons.plusMinusVariant)),
         SizedBox(
           width: 2,
         ),
