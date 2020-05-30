@@ -14,7 +14,9 @@ class CalculatorButton extends StatelessWidget {
 
   final bool isLong;
 
-  CalculatorButton({Key key, this.icon, this.type, this.isLong})
+  final String value;
+
+  CalculatorButton({Key key, this.icon, this.type, this.isLong, this.value})
       : super(key: key);
 
   Color getColorFromType() {

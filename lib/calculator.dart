@@ -1,9 +1,23 @@
 import 'package:flutter/material.dart';
 
-import 'package:calc/keypad.dart';
-import 'package:calc/display.dart';
+import 'package:FlutterCalc/keypad.dart';
+import 'package:FlutterCalc/display.dart';
 
-class Calculator extends StatelessWidget {
+class Calculator extends StatefulWidget {
+  @override
+  _CalculatorState createState() => _CalculatorState();
+}
+
+class _CalculatorState extends State<Calculator> {
+
+  String _output;
+
+  @override
+  void initState() {
+    super.initState();
+    this._output = "";
+  }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -12,7 +26,7 @@ class Calculator extends StatelessWidget {
           mainAxisAlignment: MainAxisAlignment.start,
           children: [
             Display(
-              value: "3+3",
+              value: _output,
               height: 100,
             ),
             KeyPad()
