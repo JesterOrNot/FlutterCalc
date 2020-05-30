@@ -10,7 +10,7 @@ class CalculatorButton extends StatelessWidget {
   /// 1 = number
   ///
   /// 2 = function button (i.e. clear all, or toggle negative)
-  int type;
+  final int type;
 
   final bool isLong;
 
