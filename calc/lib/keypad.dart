@@ -7,102 +7,120 @@ class KeyPad extends StatelessWidget {
   Widget build(BuildContext context) {
     return Column(children: <Widget>[
       Row(children: [
-        CalculatorButton(icon: Icon(Icons.clear_all)),
+        CalculatorButton(icon: Icon(Icons.clear_all), type: 2),
         SizedBox(
           width: 2,
         ),
-        CalculatorButton(icon: Icon(MdiIcons.plusMinusVariant)),
+        CalculatorButton(icon: Icon(MdiIcons.plusMinusVariant), type: 2),
         SizedBox(
           width: 2,
         ),
-        CalculatorButton(icon: Icon(MdiIcons.percent)),
+        CalculatorButton(icon: Icon(MdiIcons.percent), type: 0),
         SizedBox(
           width: 2,
         ),
-        CalculatorButton(icon: Icon(MdiIcons.division)),
+        CalculatorButton(icon: Icon(MdiIcons.division), type: 0),
       ]),
       SizedBox(
         height: 2,
       ),
       Row(children: [
         CalculatorButton(
+            type: 1,
             icon: Text(
-          "7",
-          style: TextStyle(fontSize: 24),
-        )),
+              "7",
+              style: TextStyle(fontSize: 24),
+            )),
         SizedBox(
           width: 2,
         ),
         CalculatorButton(
+            type: 1,
             icon: Text(
-          "8",
-          style: TextStyle(fontSize: 24),
-        )),
+              "8",
+              style: TextStyle(fontSize: 24),
+            )),
         SizedBox(
           width: 2,
         ),
         CalculatorButton(
-            icon: Text(
-          "9",
-          style: TextStyle(fontSize: 24),
-        )),
+          type: 1,
+          icon: Text(
+            "9",
+            style: TextStyle(fontSize: 24),
+          ),
+        ),
         SizedBox(
           width: 2,
         ),
-        CalculatorButton(icon: Icon(MdiIcons.multiplication)),
+        CalculatorButton(
+          icon: Icon(MdiIcons.multiplication),
+          type: 0,
+        ),
       ]),
       SizedBox(
         height: 2,
       ),
       Row(children: [
         CalculatorButton(
+            type: 1,
             icon: Text(
-          "4",
-          style: TextStyle(fontSize: 24),
-        )),
+              "4",
+              style: TextStyle(fontSize: 24),
+            )),
         SizedBox(
           width: 2,
         ),
         CalculatorButton(
+            type: 1,
             icon: Text(
-          "5",
-          style: TextStyle(fontSize: 24),
-        )),
+              "5",
+              style: TextStyle(fontSize: 24),
+            )),
         SizedBox(
           width: 2,
         ),
         CalculatorButton(
+            type: 1,
             icon: Text(
-          "6",
-          style: TextStyle(fontSize: 24),
-        )),
+              "6",
+              style: TextStyle(fontSize: 24),
+            )),
         SizedBox(
           width: 2,
         ),
-        CalculatorButton(icon: Icon(MdiIcons.minus)),
+        CalculatorButton(
+          icon: Icon(MdiIcons.minus),
+          type: 0,
+        ),
       ]),
       SizedBox(
         height: 2,
       ),
       Row(children: [
         Expanded(
-        child: CalculatorButton(
-            icon: Text(
-          "0",
-          style: TextStyle(fontSize: 24),
-        ))),
+            child: CalculatorButton(
+                type: 1,
+                icon: Text(
+                  "0",
+                  style: TextStyle(fontSize: 24),
+                ))),
         SizedBox(
           width: 2,
         ),
         CalculatorButton(
+            type: 1,
             icon: Text(
-          ".",
-          style: TextStyle(fontSize: 24),
-        )),
+              ".",
+              style: TextStyle(fontSize: 24),
+            )),
         SizedBox(
           width: 2,
         ),
-        CalculatorButton(icon: Icon(MdiIcons.equal)),
+        CalculatorButton(
+          icon: Icon(MdiIcons.equal),
+          type: 2,
+        ),
         SizedBox(
           width: 2,
         ),
