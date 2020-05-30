@@ -13,7 +13,7 @@ class Calculator extends StatelessWidget {
           children: [
             Display(
               value: "3+3",
-              height: 211,
+              height: 100,
             ),
             KeyPad()
           ],

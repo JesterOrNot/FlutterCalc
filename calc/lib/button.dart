@@ -32,7 +32,7 @@ class CalculatorButton extends StatelessWidget {
     Size size = MediaQuery.of(context).size;
     return ButtonTheme(
         minWidth: size.width / 4.1,
-        height: size.height / 8,
+        height: size.height / 7,
         child: FlatButton(
           color: getColorFromType(),
           onPressed: () {},

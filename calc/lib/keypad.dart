@@ -15,7 +15,7 @@ class KeyPad extends StatelessWidget {
         SizedBox(
           width: 2,
         ),
-        CalculatorButton(icon: Icon(MdiIcons.percent), type: 0),
+        CalculatorButton(icon: Icon(MdiIcons.percent), type: 2),
         SizedBox(
           width: 2,
         ),
@@ -98,6 +98,42 @@ class KeyPad extends StatelessWidget {
         height: 2,
       ),
       Row(children: [
+        CalculatorButton(
+            type: 1,
+            icon: Text(
+              "1",
+              style: TextStyle(fontSize: 24),
+            )),
+        SizedBox(
+          width: 2,
+        ),
+        CalculatorButton(
+            type: 1,
+            icon: Text(
+              "2",
+              style: TextStyle(fontSize: 24),
+            )),
+        SizedBox(
+          width: 2,
+        ),
+        CalculatorButton(
+            type: 1,
+            icon: Text(
+              "3",
+              style: TextStyle(fontSize: 24),
+            )),
+        SizedBox(
+          width: 2,
+        ),
+        CalculatorButton(
+          icon: Icon(MdiIcons.plus),
+          type: 0,
+        ),
+      ]),
+      SizedBox(
+        height: 2,
+      ),
+      Row(children: [
         Expanded(
             child: CalculatorButton(
                 type: 1,
@@ -119,7 +155,7 @@ class KeyPad extends StatelessWidget {
         ),
         CalculatorButton(
           icon: Icon(MdiIcons.equal),
-          type: 2,
+          type: 0,
         ),
         SizedBox(
           width: 2,
