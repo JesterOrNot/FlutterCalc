@@ -7,7 +7,12 @@ class KeyPad extends StatelessWidget {
   Widget build(BuildContext context) {
     return Column(children: <Widget>[
       Row(children: [
-        CalculatorButton(icon: Icon(Icons.clear_all), type: 2),
+        CalculatorButton(
+            icon: Text(
+              "AC",
+              style: TextStyle(fontSize: 24),
+            ),
+            type: 2),
         SizedBox(
           width: 2,
         ),
@@ -134,13 +139,13 @@ class KeyPad extends StatelessWidget {
         height: 2,
       ),
       Row(children: [
-        Expanded(
-            child: CalculatorButton(
-                type: 1,
-                icon: Text(
-                  "0",
-                  style: TextStyle(fontSize: 24),
-                ))),
+        CalculatorButton(
+            type: 1,
+            isLong: true,
+            icon: Text(
+              "0",
+              style: TextStyle(fontSize: 24),
+            )),
         SizedBox(
           width: 2,
         ),
