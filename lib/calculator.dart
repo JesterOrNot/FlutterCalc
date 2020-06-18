@@ -2,22 +2,9 @@ import 'package:flutter/material.dart';
 
 import 'package:FlutterCalc/keypad.dart';
 import 'package:FlutterCalc/display.dart';
+import 'package:FlutterCalc/globals.dart';
 
-class Calculator extends StatefulWidget {
-  @override
-  _CalculatorState createState() => _CalculatorState();
-}
-
-class _CalculatorState extends State<Calculator> {
-
-  String _output;
-
-  @override
-  void initState() {
-    super.initState();
-    this._output = "";
-  }
-
+class Calculator extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -25,10 +12,14 @@ class _CalculatorState extends State<Calculator> {
         body: Column(
           mainAxisAlignment: MainAxisAlignment.start,
           children: [
-            Display(
-              value: _output,
-              height: 100,
-            ),
+            StreamBuilder(
+                stream: state.stream$,
+                builder: (BuildContext context, AsyncSnapshot snap) {
+                  return Display(
+                    value: snap.data,
+                    height: 100,
+                  );
+                }),
             KeyPad()
           ],
         ));

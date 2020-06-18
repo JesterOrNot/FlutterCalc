@@ -1,8 +1,4 @@
 image: gitpod/workspace-flutter
-vscode:
-  extensions:
-    - Dart-Code.dart-code@3.5.1:W6zqgIED1gxtkBH/pbfGXA==
-    - Dart-Code.flutter@3.5.1:0FyuzXye7dV19PNst3+Llg==
 tasks:
   - name: Calculator
     init: flutter run --web-port 8080
@@ -14,3 +10,7 @@ github:
     branches: true
     pullRequestsFromForks: true
     addBadge: true
+vscode:
+  extensions:
+    - Dart-Code.flutter@3.5.1:0FyuzXye7dV19PNst3+Llg==
+    - Dart-Code.dart-code@3.9.0-dev:F9102gBSxPDXX6fro09WGw==

@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:FlutterCalc/button.dart';
 import 'package:material_design_icons_flutter/material_design_icons_flutter.dart';
+import 'package:FlutterCalc/globals.dart';
 
 class KeyPad extends StatelessWidget {
-
   @override
   Widget build(BuildContext context) {
     return Column(children: <Widget>[
@@ -13,11 +13,16 @@ class KeyPad extends StatelessWidget {
               "AC",
               style: TextStyle(fontSize: 24),
             ),
+            onPress: () => state.clear(),
             type: 2),
         SizedBox(
           width: 2,
         ),
-        CalculatorButton(icon: Icon(MdiIcons.plusMinusVariant), type: 2),
+        CalculatorButton(
+          icon: Icon(MdiIcons.plusMinusVariant),
+          type: 2,
+          onPress: () => state.toggleNegative(),
+        ),
         SizedBox(
           width: 2,
         ),
@@ -25,7 +30,11 @@ class KeyPad extends StatelessWidget {
         SizedBox(
           width: 2,
         ),
-        CalculatorButton(icon: Icon(MdiIcons.division), type: 0, value: "/",),
+        CalculatorButton(
+          icon: Icon(MdiIcons.division),
+          type: 0,
+          value: "/",
+        ),
       ]),
       SizedBox(
         height: 2,
@@ -102,11 +111,7 @@ class KeyPad extends StatelessWidget {
         SizedBox(
           width: 2,
         ),
-        CalculatorButton(
-          icon: Icon(MdiIcons.minus),
-          type: 0,
-          value: "-"
-        ),
+        CalculatorButton(icon: Icon(MdiIcons.minus), type: 0, value: "-"),
       ]),
       SizedBox(
         height: 2,
@@ -165,7 +170,7 @@ class KeyPad extends StatelessWidget {
         ),
         CalculatorButton(
             type: 1,
-            value: "0",
+            value: ".",
             icon: Text(
               ".",
               style: TextStyle(fontSize: 24),
@@ -176,6 +181,7 @@ class KeyPad extends StatelessWidget {
         CalculatorButton(
           icon: Icon(MdiIcons.equal),
           type: 0,
+          onPress: () => state.evaluate(),
         ),
         SizedBox(
           width: 2,
