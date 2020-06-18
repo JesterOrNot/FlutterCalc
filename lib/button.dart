@@ -1,3 +1,4 @@
+import 'package:FlutterCalc/globals.dart';
 import 'package:flutter/material.dart';
 
 class CalculatorButton extends StatelessWidget {
@@ -16,7 +17,10 @@ class CalculatorButton extends StatelessWidget {
 
   final String value;
 
-  CalculatorButton({Key key, this.icon, this.type, this.isLong, this.value})
+  final Function onPress;
+
+  CalculatorButton(
+      {Key key, this.icon, this.type, this.isLong, this.value, this.onPress})
       : super(key: key);
 
   Color getColorFromType() {
@@ -49,7 +53,13 @@ class CalculatorButton extends StatelessWidget {
         height: size.height / 7,
         child: FlatButton(
           color: getColorFromType(),
-          onPressed: () {},
+          onPressed: () {
+            if (onPress != null) {
+              onPress();
+            } else {
+              state.push(this.value);
+            }
+          },
           child: icon,
         ));
   }
