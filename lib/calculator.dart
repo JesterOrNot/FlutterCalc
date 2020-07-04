@@ -15,9 +15,11 @@ class Calculator extends StatelessWidget {
             StreamBuilder(
                 stream: state.stream$,
                 builder: (BuildContext context, AsyncSnapshot snap) {
-                  return Display(
-                    value: snap.data,
-                    height: 100,
+                  return Expanded(
+                    child: Display(
+                      value: snap.data,
+                      height: 100,
+                    ),
                   );
                 }),
             KeyPad()
