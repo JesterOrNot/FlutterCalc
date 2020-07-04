@@ -1,4 +1,5 @@
-image: gitpod/workspace-flutter
+image:
+  file: .gitpod.Dockerfile
 tasks:
   - name: Calculator
     init: flutter run --web-port 8080
