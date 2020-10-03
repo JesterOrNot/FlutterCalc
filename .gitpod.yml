@@ -1,5 +1,6 @@
 image:
   file: .gitpod.Dockerfile
+privileged: true
 tasks:
   - name: Calculator
     init: flutter run --web-port 8080
